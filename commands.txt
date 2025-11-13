@@ -1,0 +1,14 @@
+First create a folder and open it in vs code.
+Create two files app.py, students.py in that folder.
+Paste the respective codes and in cmd check if python is installed or not.
+python --version 
+pip --version
+pip install Flask
+Then move to ur project folder by cd command.
+run python app.py.
+Then open another cmd move to project folder and execute the following commands: 
+To get all students: curl http://127.0.0.1:5000/students
+To get student by ID: curl http://127.0.0.1:5000/students/1
+To add new student :curl -X POST http://127.0.0.1:5000/students -H "Content-Type: application/json" -d "{\"name\":\"John\",\"age\":22,\"course\":\"ME\"}"
+To update a student :curl -X PATCH http://127.0.0.1:5000/students/3 -H "Content-Type: application/json" -d "{\"course\":\"CSE\"}"
+To delete a student: curl -X DELETE http://127.0.0.1:5000/students/3
