@@ -9,7 +9,7 @@ pipeline {
         stage('Clone Repository') {
             steps {
                 echo 'Cloning GitHub repository...'
-                git 'https://github.com/KarthikaReddy503/Devops_w1.git'
+                git branch: 'main','https://github.com/KarthikaReddy503/Devops_w1.git'
             }
         }
 
